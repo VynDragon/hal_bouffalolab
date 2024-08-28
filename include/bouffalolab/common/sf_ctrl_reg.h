@@ -33,8 +33,8 @@
   *
   ******************************************************************************
   */
-#ifndef  __SF_CTRL_REG_H__
-#define  __SF_CTRL_REG_H__
+#ifndef  __SF_CTRL_REG_H_COMMON__
+#define  __SF_CTRL_REG_H_COMMON__
 
 /****************************************************************************
  * Pre-processor Definitions
@@ -980,4 +980,4 @@
 
 #define SF_CTRL_AES_REGION_OFFSET     0x200
 
-#endif  /* __SF_CTRL_REG_H__ */
+#endif  /* __SF_CTRL_REG_H_COMMON__ */
