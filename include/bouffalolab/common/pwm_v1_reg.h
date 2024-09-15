@@ -41,7 +41,7 @@
 ****************************************************************************/
 
 /* Register offsets *********************************************************/
-#if defined(BL702L)
+#if defined(CONFIG_SOC_SERIES_BL70XL)
 #define PWM_INT_CONFIG_OFFSET (-0x20) /* pwm_int_config */
 #else
 #define PWM_INT_CONFIG_OFFSET (0x0) /* pwm_int_config */

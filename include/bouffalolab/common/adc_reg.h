@@ -45,7 +45,7 @@
 /* gpip base */
 #define GPIP_GPADC_CONFIG_OFFSET    (0x0) /* gpadc_config */
 #define GPIP_GPADC_DMA_RDATA_OFFSET (0x4) /* gpadc_dma_rdata */
-#if defined(BL616) || defined(BL606P) || defined(BL808) || defined(BL628)
+#if defined(CONFIG_SOC_SERIES_BL61X) || defined(CONFIG_SOC_SERIES_BL808)
 #define GPIP_GPADC_PIR_TRAIN_OFFSET (0x20) /* gpadc_pir_train */
 #endif
 /* aon base */
@@ -72,7 +72,7 @@
 #define GPIP_GPADC_RDY           (1 << 4U)
 #define GPIP_GPADC_FIFO_OVERRUN  (1 << 5U)
 #define GPIP_GPADC_FIFO_UNDERRUN (1 << 6U)
-#if defined(BL702) || defined(BL702L)
+#if defined(CONFIG_SOC_SERIES_BL70X) || defined(CONFIG_SOC_SERIES_BL70XL)
 #define GPIP_GPADC_FIFO_RDY (1 << 7U)
 #endif
 #define GPIP_GPADC_RDY_CLR            (1 << 8U)
@@ -81,7 +81,7 @@
 #define GPIP_GPADC_RDY_MASK           (1 << 12U)
 #define GPIP_GPADC_FIFO_OVERRUN_MASK  (1 << 13U)
 #define GPIP_GPADC_FIFO_UNDERRUN_MASK (1 << 14U)
-#if defined(BL702) || defined(BL702L)
+#if defined(CONFIG_SOC_SERIES_BL70X) || defined(CONFIG_SOC_SERIES_BL70XL)
 #define GPIP_GPADC_FIFO_RDY_MASK (1 << 15U)
 #endif
 #define GPIP_GPADC_FIFO_DATA_COUNT_SHIFT (16U)
@@ -113,7 +113,7 @@
 #define AON_GPADC_MICBIAS_EN    (1 << 14U)
 #define AON_GPADC_MICPGA_EN     (1 << 15U)
 #define AON_GPADC_BYP_MICBOOST  (1 << 16U)
-#if defined(BL616) || defined(BL606P) || defined(BL808) || defined(BL628)
+#if defined(CONFIG_SOC_SERIES_BL61X) || defined(CONFIG_SOC_SERIES_BL808)
 #define AON_GPADC_RCAL_EN (1 << 17U)
 #endif
 #define AON_GPADC_DWA_EN              (1 << 18U)
@@ -124,10 +124,10 @@
 #define AON_GPADC_MICBOOST_32DB_EN    (1 << 23U)
 #define AON_GPADC_CHIP_SEN_PU         (1 << 27U)
 #define AON_GPADC_SEN_SEL_SHIFT       (28U)
-#if defined(BL616) || defined(BL606P) || defined(BL808) || defined(BL628)
+#if defined(CONFIG_SOC_SERIES_BL61X) || defined(CONFIG_SOC_SERIES_BL808)
 #define AON_GPADC_SEN_SEL_MASK (0x7 << AON_GPADC_SEN_SEL_SHIFT)
 #define AON_GPADC_SEN_TEST_EN  (1 << 31U)
-#elif defined(BL702) || defined(BL602) || defined(BL702L)
+#elif defined(CONFIG_SOC_SERIES_BL70X) || defined(CONFIG_SOC_SERIES_BL60X) || defined(CONFIG_SOC_SERIES_BL70XL)
 #define AON_GPADC_SEN_SEL_MASK (0x3 << AON_GPADC_SEN_SEL_SHIFT)
 #define AON_GPADC_SEN_TEST_EN  (1 << 30U)
 #endif
@@ -140,7 +140,7 @@
 #define AON_GPADC_VCM_SEL_EN    (1 << 8U)
 #define AON_GPADC_VCM_HYST_SEL  (1 << 9U)
 #define AON_GPADC_LOWV_DET_EN   (1 << 10U)
-#if defined(BL616) || defined(BL606P) || defined(BL808) || defined(BL628)
+#if defined(CONFIG_SOC_SERIES_BL61X) || defined(CONFIG_SOC_SERIES_BL808)
 #define AON_GPADC_PWM_TRG_EN        (1 << 11U)
 #define AON_GPADC_CLK_ANA_DLY_SHIFT (12U)
 #define AON_GPADC_CLK_ANA_DLY_MASK  (0xf << AON_GPADC_CLK_ANA_DLY_SHIFT)

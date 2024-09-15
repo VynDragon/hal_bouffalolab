@@ -85,7 +85,7 @@
 #define EF_CTRL_EF_IF_0_CYC_MODIFY_LEN         (1U)
 #define EF_CTRL_EF_IF_0_CYC_MODIFY_MASK        (((1U << EF_CTRL_EF_IF_0_CYC_MODIFY_LEN) - 1) << EF_CTRL_EF_IF_0_CYC_MODIFY_POS)
 #define EF_CTRL_EF_IF_0_CYC_MODIFY_UMASK       (~(((1U << EF_CTRL_EF_IF_0_CYC_MODIFY_LEN) - 1) << EF_CTRL_EF_IF_0_CYC_MODIFY_POS))
-#if defined(BL702) || defined(BL602) || defined(BL702L)
+#if defined(CONFIG_SOC_SERIES_BL70X) || defined(CONFIG_SOC_SERIES_BL60X) || defined(CONFIG_SOC_SERIES_BL70XL)
 #define EF_CTRL_EF_CLK_SAHB_DATA_SEL       EF_CTRL_EF_CLK_SAHB_DATA_SEL
 #define EF_CTRL_EF_CLK_SAHB_DATA_SEL_POS   (7U)
 #define EF_CTRL_EF_CLK_SAHB_DATA_SEL_LEN   (1U)
@@ -102,7 +102,7 @@
 #define EF_CTRL_EF_IF_POR_DIG_LEN          (1U)
 #define EF_CTRL_EF_IF_POR_DIG_MASK         (((1U << EF_CTRL_EF_IF_POR_DIG_LEN) - 1) << EF_CTRL_EF_IF_POR_DIG_POS)
 #define EF_CTRL_EF_IF_POR_DIG_UMASK        (~(((1U << EF_CTRL_EF_IF_POR_DIG_LEN) - 1) << EF_CTRL_EF_IF_POR_DIG_POS))
-#if defined(BL702) || defined(BL602) || defined(BL702L)
+#if defined(CONFIG_SOC_SERIES_BL70X) || defined(CONFIG_SOC_SERIES_BL60X) || defined(CONFIG_SOC_SERIES_BL70XL)
 #define EF_CTRL_EF_CLK_SAHB_DATA_GATE       EF_CTRL_EF_CLK_SAHB_DATA_GATE
 #define EF_CTRL_EF_CLK_SAHB_DATA_GATE_POS   (17U)
 #define EF_CTRL_EF_CLK_SAHB_DATA_GATE_LEN   (1U)
@@ -147,7 +147,7 @@
 #define EF_CTRL_EF_IF_PROT_CODE_CYC_UMASK   (~(((1U << EF_CTRL_EF_IF_PROT_CODE_CYC_LEN) - 1) << EF_CTRL_EF_IF_PROT_CODE_CYC_POS))
 
 /* 0x80C : ef_if_0_manual, 606P and 808 manual config is the same but not need witch clock */
-#if defined(BL702) || defined(BL602) || defined(BL702L) || defined(BL606P) || defined(BL808)
+#if defined(CONFIG_SOC_SERIES_BL70X) || defined(CONFIG_SOC_SERIES_BL60X) || defined(CONFIG_SOC_SERIES_BL70XL) || defined(CONFIG_SOC_SERIES_BL808)
 #define EF_CTRL_EF_IF_0_MANUAL_OFFSET        (0x80C)
 #define EF_CTRL_EF_IF_A                      EF_CTRL_EF_IF_A
 #define EF_CTRL_EF_IF_A_POS                  (0U)
@@ -239,7 +239,7 @@
 #define EF_CTRL_EF_IF_PROT_CODE_MANUAL_UMASK (~(((1U << EF_CTRL_EF_IF_PROT_CODE_MANUAL_LEN) - 1) << EF_CTRL_EF_IF_PROT_CODE_MANUAL_POS))
 #endif
 
-#if defined(BL606P) || defined(BL808)
+#if defined(CONFIG_SOC_SERIES_BL808)
 /* 0x900 : ef_if_ctrl_1 */
 #define EF_CTRL_EF_IF_CTRL_1_OFFSET      (0x900)
 #define EF_CTRL_EF_IF_1_BUSY             EF_CTRL_EF_IF_1_BUSY

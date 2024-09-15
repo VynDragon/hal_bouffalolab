@@ -44,12 +44,12 @@
 
 #define CAM_FRONT_CONFIG_OFFSET                                 (0x0)/* config */
 #define CAM_FRONT_DVP2BUS_SRC_SEL_1_OFFSET                      (0x8)/* dvp2bus_src_sel_1 */
-#if defined(BL616)
+#if defined(CONFIG_SOC_SERIES_BL61X)
 #define CAM_FRONT_SNSR_CTRL_OFFSET                              (0xC)/* snsr_ctrl */
 #define CAM_FRONT_EMI_MISC_OFFSET                               (0x10)/* emi_misc */
 #define CAM_FRONT_ISP_ID_YUV_OFFSET                             (0x14)/* isp_id_yuv */
 #endif
-#if defined(BL808)
+#if defined(CONFIG_SOC_SERIES_BL808)
 #define CAM_FRONT_PIX_DATA_CTRL_OFFSET                          (0x4)/* pix_data_ctrl */
 #define CAM_FRONT_DVP2BUS_SRC_SEL_2_OFFSET                      (0x14)/* dvp2bus_src_sel_2 */
 #define CAM_FRONT_ISP_ID_YUV_OFFSET                             (0x28)/* isp_id_yuv */
@@ -74,7 +74,7 @@
 #define CAM_FRONT_RG_DVPAS_FIFO_TH_SHIFT                        (16U)
 #define CAM_FRONT_RG_DVPAS_FIFO_TH_MASK                         (0x7ff<<CAM_FRONT_RG_DVPAS_FIFO_TH_SHIFT)
 
-#if defined(BL808)
+#if defined(CONFIG_SOC_SERIES_BL808)
 /* 0x4 : pix_data_ctrl */
 #define CAM_FRONT_REG_PIX_DATA_CTRL_SHIFT                       (0U)
 #define CAM_FRONT_REG_PIX_DATA_CTRL_MASK                        (0xfff<<CAM_FRONT_REG_PIX_DATA_CTRL_SHIFT)
@@ -161,7 +161,7 @@
 #define CAM_FRONT_RG_Y2RA_MTX_22_MASK                           (0xfff<<CAM_FRONT_RG_Y2RA_MTX_22_SHIFT)
 #endif
 
-#if defined(BL616)
+#if defined(CONFIG_SOC_SERIES_BL61X)
 /* 0x8 : dvp2bus_src_sel_1 */
 #define CAM_FRONT_RG_D2X_DVP_SEL                                (1<<0U)
 

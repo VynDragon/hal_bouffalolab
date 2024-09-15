@@ -1,7 +1,18 @@
 #ifndef _BFLB_UART_H
 #define _BFLB_UART_H
 
-#define UART_FIFO_MAX         32
+#if defined(CONFIG_SOC_SERIES_BL60X) || defined(CONFIG_SOC_SERIES_BL70X)
+#define UART_FIFO_MAX           32
+#elif defined(CONFIG_SOC_SERIES_BL808)
+#define UART_FIFO_MAX           32
+#elif defined(CONFIG_SOC_SERIES_BL61X)
+#define UART_FIFO_MAX           32
+#elif defined(CONFIG_SOC_SERIES_BL70XL)
+#define UART_FIFO_MAX           16
+#else
+#error "unknown device"
+#endif
+
 
 #define UART_DIRECTION_TX     (1 << 0)
 #define UART_DIRECTION_RX     (1 << 1)

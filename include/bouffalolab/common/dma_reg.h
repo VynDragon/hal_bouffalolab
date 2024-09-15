@@ -137,27 +137,27 @@
 #define DMA_TRANSFERSIZE_SHIFT (0U)
 #define DMA_TRANSFERSIZE_MASK  (0xfff << DMA_TRANSFERSIZE_SHIFT)
 #define DMA_SBSIZE_SHIFT       (12U)
-#if defined(BL602)
+#if defined(CONFIG_SOC_SERIES_BL60X)
 #define DMA_SBSIZE_MASK        (0x7 << DMA_SBSIZE_SHIFT)
 #else
 #define DMA_SBSIZE_MASK        (0x3 << DMA_SBSIZE_SHIFT)
 #define DMA_DST_MIN_MODE       (1 << 14U)
 #endif
 #define DMA_DBSIZE_SHIFT       (15U)
-#if defined(BL602)
+#if defined(CONFIG_SOC_SERIES_BL60X)
 #define DMA_DBSIZE_MASK        (0x7 << DMA_DBSIZE_SHIFT)
 #else
 #define DMA_DBSIZE_MASK        (0x3 << DMA_DBSIZE_SHIFT)
 #define DMA_DST_ADD_MODE       (1 << 17U)
 #endif
 #define DMA_SWIDTH_SHIFT       (18U)
-#if defined(BL602)
+#if defined(CONFIG_SOC_SERIES_BL60X)
 #define DMA_SWIDTH_MASK        (0x7 << DMA_SWIDTH_SHIFT)
 #else
 #define DMA_SWIDTH_MASK        (0x3 << DMA_SWIDTH_SHIFT)
 #endif
 #define DMA_DWIDTH_SHIFT       (21U)
-#if defined(BL602)
+#if defined(CONFIG_SOC_SERIES_BL60X)
 #define DMA_DWIDTH_MASK        (0x7 << DMA_DWIDTH_SHIFT)
 #define DMA_SLARGERD           (1 << 24U)
 #else

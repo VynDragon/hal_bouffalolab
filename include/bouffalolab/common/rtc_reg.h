@@ -53,10 +53,10 @@
 /* 0x0 : HBN_CTL */
 #define HBN_RTC_ENABLE               (1 << 0U)
 #define HBN_RTC_CTL_SHIFT            (1U)
-#if defined(BL602) || defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL60X) || defined(CONFIG_SOC_SERIES_BL70X)
 #define HBN_RTC_CTL_MASK             (0x3f << HBN_RTC_CTL_SHIFT)
 #define HBN_RTC_DLY_OPTION           (1 << 24U)
-#elif  defined(BL808) || defined(BL606P) || defined(BL616) || defined(BL702L) || defined(BL628)
+#elif  defined(CONFIG_SOC_SERIES_BL808) || defined(CONFIG_SOC_SERIES_BL61X) || defined(CONFIG_SOC_SERIES_BL70XL)
 #define HBN_RTC_CTL_MASK             (0x7 << HBN_RTC_CTL_SHIFT)
 #define HBN_RTC_DLY_OPTION           (1 << 4U)
 #endif

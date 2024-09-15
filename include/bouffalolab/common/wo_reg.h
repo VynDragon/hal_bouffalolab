@@ -42,7 +42,7 @@
 
 /* Register offsets *********************************************************/
 
-#if defined(BL616) || defined(BL606P) || defined(BL808) || defined(BL628)
+#if defined(CONFIG_SOC_SERIES_BL61X) || defined(CONFIG_SOC_SERIES_BL808)
 #define GLB_GPIO_CFG0_OFFSET                                    (0x8C4)/* gpio_cfg0 */
 #define GLB_GPIO_CFG142_OFFSET                                  (0xAFC)/* gpio_cfg142 */
 #define GLB_GPIO_CFG143_OFFSET                                  (0xB00)/* gpio_cfg143 */

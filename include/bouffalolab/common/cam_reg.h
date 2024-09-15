@@ -52,7 +52,7 @@
 #define CAM_FRAME_START_ADDR1_OFFSET    (0x48)/* frame_start_addr1 */
 #define CAM_FRAME_START_ADDR2_OFFSET    (0x50)/* frame_start_addr2 */
 #define CAM_FRAME_START_ADDR3_OFFSET    (0x58)/* frame_start_addr3 */
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_DVP2AXI_FRAME_BCNT_0_OFFSET (0xC)/* dvp2axi_frame_bcnt_0 */
 #define CAM_DVP2AXI_ADDR_START_1_OFFSET (0x10)/* dvp2axi_addr_start_1 */
 #define CAM_DVP2AXI_MEM_BCNT_1_OFFSET   (0x14)/* dvp2axi_mem_bcnt_1 */
@@ -112,7 +112,7 @@
 #define CAM_REG_FRAM_VLD_POL         (1<<2U)
 #define CAM_REG_LINE_VLD_POL         (1<<3U)
 #define CAM_REG_XLEN_SHIFT           (4U)
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_REG_XLEN_MASK            (0x3<<CAM_REG_XLEN_SHIFT)
 #else
 #define CAM_REG_XLEN_MASK            (0x7<<CAM_REG_XLEN_SHIFT)
@@ -122,7 +122,7 @@
 #define CAM_REG_HW_MODE_FWRAP        (1<<11U)
 #define CAM_REG_DROP_EN              (1<<12U)
 #define CAM_REG_DROP_EVEN            (1<<13U)
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_REG_SUBSAMPLE_EN         (1<<14U)
 #define CAM_REG_SUBSAMPLE_EVEN       (1<<15U)
 #define CAM_REG_INTERLV_MODE         (1<<16U)
@@ -134,7 +134,7 @@
 #define CAM_REG_DVP_DATA_BSEL        (1<<19U)
 #endif
 #define CAM_REG_DVP_PIX_CLK_CG       (1<<20U)
-#if !defined(BL702)
+#if !defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_REG_V_SUBSAMPLE_EN       (1<<22U)
 #define CAM_REG_V_SUBSAMPLE_POL      (1<<23U)
 #endif
@@ -149,7 +149,7 @@
 #define CAM_REG_MEM_BURST_CNT_SHIFT (0U)
 #define CAM_REG_MEM_BURST_CNT_MASK  (0xffffffff<<CAM_REG_MEM_BURST_CNT_SHIFT)
 
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 /* 0xC : dvp2ahb_frame_bcnt_0 */
 #define CAM_REG_FRAME_BURST_CNT_0_SHIFT (0U)
 #define CAM_REG_FRAME_BURST_CNT_0_MASK  (0xffffffff<<CAM_REG_FRAME_BURST_CNT_0_SHIFT)
@@ -220,7 +220,7 @@
 
 /* 0x14 : dvp_frame_fifo_pop */
 #define CAM_RFIFO_POP            (1<<0U)
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_RFIFO_POP_1          (1<<1U)
 #endif
 #define CAM_REG_INT_NORMAL_CLR   (1<<4U)
@@ -229,14 +229,14 @@
 #define CAM_REG_INT_FIFO_CLR     (1<<7U)
 #define CAM_REG_INT_HCNT_CLR     (1<<8U)
 #define CAM_REG_INT_VCNT_CLR     (1<<9U)
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_REG_INT_NORMAL_CLR_1 (1<<16U)
 #define CAM_REG_INT_MEM_CLR_1    (1<<17U)
 #define CAM_REG_INT_FRAME_CLR_1  (1<<18U)
 #define CAM_REG_INT_FIFO_CLR_1   (1<<19U)
 #endif
 
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 /* 0x24 : snsr_control */
 #define CAM_REG_CAM_RST  (1<<0U)
 #define CAM_REG_CAM_PWDN (1<<1U)
@@ -289,7 +289,7 @@
 #define CAM_FRAME_START_ADDR_0_SHIFT (0U)
 #define CAM_FRAME_START_ADDR_0_MASK  (0xffffffff<<CAM_FRAME_START_ADDR_0_SHIFT)
 
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 /* 0x44 : frame_byte_cnt0_0 */
 #define CAM_FRAME_BYTE_CNT_0_0_SHIFT (0U)
 #define CAM_FRAME_BYTE_CNT_0_0_MASK  (0xffffffff<<CAM_FRAME_BYTE_CNT_0_0_SHIFT)
@@ -299,7 +299,7 @@
 #define CAM_FRAME_START_ADDR_1_SHIFT (0U)
 #define CAM_FRAME_START_ADDR_1_MASK  (0xffffffff<<CAM_FRAME_START_ADDR_1_SHIFT)
 
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 /* 0x4C : frame_byte_cnt0_1 */
 #define CAM_FRAME_BYTE_CNT_0_1_SHIFT (0U)
 #define CAM_FRAME_BYTE_CNT_0_1_MASK  (0xffffffff<<CAM_FRAME_BYTE_CNT_0_1_SHIFT)
@@ -309,7 +309,7 @@
 #define CAM_FRAME_START_ADDR_2_SHIFT (0U)
 #define CAM_FRAME_START_ADDR_2_MASK  (0xffffffff<<CAM_FRAME_START_ADDR_2_SHIFT)
 
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 /* 0x54 : frame_byte_cnt0_2 */
 #define CAM_FRAME_BYTE_CNT_0_2_SHIFT (0U)
 #define CAM_FRAME_BYTE_CNT_0_2_MASK  (0xffffffff<<CAM_FRAME_BYTE_CNT_0_2_SHIFT)
@@ -319,7 +319,7 @@
 #define CAM_FRAME_START_ADDR_3_SHIFT (0U)
 #define CAM_FRAME_START_ADDR_3_MASK  (0xffffffff<<CAM_FRAME_START_ADDR_3_SHIFT)
 
-#if defined(BL702)
+#if defined(CONFIG_SOC_SERIES_BL70X)
 /* 0x5C : frame_byte_cnt0_3 */
 #define CAM_FRAME_BYTE_CNT_0_3_SHIFT (0U)
 #define CAM_FRAME_BYTE_CNT_0_3_MASK  (0xffffffff<<CAM_FRAME_BYTE_CNT_0_3_SHIFT)
@@ -438,7 +438,7 @@
 #define CAM_REG_DVP_DBG_EN          (1<<0U)
 #define CAM_REG_DVP_DBG_SEL_SHIFT   (1U)
 #define CAM_REG_DVP_DBG_SEL_MASK    (0x7<<CAM_REG_DVP_DBG_SEL_SHIFT)
-#if !defined(BL702)
+#if !defined(CONFIG_SOC_SERIES_BL70X)
 #define CAM_REG_ID_LATCH_LINE_SHIFT (8U)
 #define CAM_REG_ID_LATCH_LINE_MASK  (0xf<<CAM_REG_ID_LATCH_LINE_SHIFT)
 #endif
