@@ -21,6 +21,8 @@
 #define BFLB_PINMUX_FUN_INST_cam0                       0x0009
 #define BFLB_PINMUX_FUN_INST_cam1                       0x0109
 #define BFLB_PINMUX_FUN_INST_analog                     0x000a
+#define BFLB_PINMUX_FUN_INST_dac                        0x000a
+#define BFLB_PINMUX_FUN_INST_adc                        0x000a
 #define BFLB_PINMUX_FUN_INST_swgpio                     0x000b
 #define BFLB_PINMUX_FUN_INST_gpio                       0x000b
 #define BFLB_PINMUX_FUN_INST_sdio                       0x000c

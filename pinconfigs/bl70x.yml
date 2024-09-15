@@ -32,6 +32,8 @@ peripherals:
     - [pwm, 8]
     - [cam, 9]
     - [analog, 10]
+    - [dac, 10]
+    - [adc, 10]
     - [swgpio, 11]
     - [gpio, 11]
     - [jtag, 14]

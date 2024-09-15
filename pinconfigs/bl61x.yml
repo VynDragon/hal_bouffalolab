@@ -33,6 +33,8 @@ peripherals:
     - [emac, 8]
     - [cam, 9, 0, 1]
     - [analog, 10]
+    - [dac, 10]
+    - [adc, 10]
     - [swgpio, 11]
     - [gpio, 11]
     - [sdio, 12]
