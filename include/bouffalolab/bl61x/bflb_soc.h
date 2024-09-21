@@ -329,9 +329,4 @@ typedef enum {
   */
 #include <stdint.h>
 
-/* RISCV CPU include files */
-#ifdef __GNUC__
-#include <csi_core.h>
-#endif
-
 #endif
