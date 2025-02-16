@@ -1,7 +1,11 @@
 #ifndef _BFLB_UART_H
 #define _BFLB_UART_H
 
+#if !defined(CONFIG_SOC_SERIES_BL70XL)
 #define UART_FIFO_MAX         32
+#else
+#define UART_FIFO_MAX         16
+#endif
 
 #define UART_DIRECTION_TX     (1 << 0)
 #define UART_DIRECTION_RX     (1 << 1)
