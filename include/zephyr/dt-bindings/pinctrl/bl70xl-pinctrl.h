@@ -7,7 +7,6 @@
 #ifndef DT_BINDINGS_PINCTRL_BFLB_BL70XL_PINCTRL_H_
 #define DT_BINDINGS_PINCTRL_BFLB_BL70XL_PINCTRL_H_
 
-#define BFLB_PINMUX_FUN_INST_sdio                       0x0001
 #define BFLB_PINMUX_FUN_INST_flash0                     0x0002
 #define BFLB_PINMUX_FUN_INST_flash1                     0x0102
 #define BFLB_PINMUX_FUN_INST_flash2                     0x0202
